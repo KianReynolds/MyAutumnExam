@@ -27,10 +27,16 @@ namespace MyRepeatExam
 
     }
 
+    //public enum KennelType { Basic, Standard, Premium }
     public class Kennel
     {
+        public enum KennelType { Basic, Standard, Premium }
+
+
         public int KennelID { get; set; }
-        public enum KennelType { Basic, StandardCommands, Premium }
+
+        public Type Type { get; set; }
+
         public string Location { get; set; }
 
         public virtual List<Booking> Bookings { get; set; }

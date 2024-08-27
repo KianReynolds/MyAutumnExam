@@ -15,6 +15,10 @@ namespace DataManagement
 
             using (db)
             {
+                //Kennel k1 = new Kennel() {  Type= Kennel.KennelType.Basic, Location = "outdoor" };
+                //Kennel k2 = new Kennel() {  Type= Kennel.KennelType.Standard, Location = "indoors" };
+                //Kennel k3 = new Kennel() {  Type= Kennel.KennelType.Premium, Location = "house" };
+
                 Kennel k1 = new Kennel() { Location = "outdoor" };
                 Kennel k2 = new Kennel() { Location = "indoors" };
                 Kennel k3 = new Kennel() { Location = "house" };
