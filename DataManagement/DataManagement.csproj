@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyRepeatExam\MyRepeatExam.csproj">
+      <Project>{dd412ebe-2a7a-4163-a764-d2762c23c96d}</Project>
+      <Name>MyRepeatExam</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
