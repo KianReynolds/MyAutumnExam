@@ -18,11 +18,11 @@ namespace MyRepeatExam
         //foreign key
         public int KennelID { get; set; }
         //navigation between the 2 classes
-        public virtual Kennel Kennel { get; set; }
+        public virtual List <Kennel> Kennels { get; set; }
 
         public Booking()
         {
-            Kennel = new Kennel();
+            Kennels = new List<Kennel>();
         }
 
     }
@@ -30,7 +30,7 @@ namespace MyRepeatExam
     public class Kennel
     {
         public int KennelID { get; set; }
-        //public Enum KennelType {"Basic", "StandardCommands", "Premium"}
+        public enum KennelType { Basic, StandardCommands, Premium }
         public string Location { get; set; }
 
         public virtual List<Booking> Bookings { get; set; }

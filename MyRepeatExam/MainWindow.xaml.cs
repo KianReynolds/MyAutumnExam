@@ -20,6 +20,7 @@ namespace MyRepeatExam
     /// </summary>
     public partial class MainWindow : Window
     {
+        KennelData db = new KennelData("OOD_KianReynolds");
         public MainWindow()
         {
             InitializeComponent();
@@ -27,6 +28,13 @@ namespace MyRepeatExam
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //populate kennels listbox
+            lbxKennel.ItemsSource = Enum.GetNames(typeof(Kennel));
+           
+            //populate kennels info 
+            var query = from k in db.Bookings
+                        orderby k.Kennels
+                        select k.Kennels;
 
         }
     }
