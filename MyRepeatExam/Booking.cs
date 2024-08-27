@@ -18,7 +18,10 @@ namespace MyRepeatExam
         //navigation between the 2 classes
         public virtual Kennel Kennel  { get; set; }
 
-
+        public Booking()
+        {
+                Kennel = new Kennel();
+        }
 
     }
 
@@ -32,9 +35,9 @@ namespace MyRepeatExam
 
     }
 
-    public class BookingData : DbContext
+    public class KennelData : DbContext
     {
-        public BookingData(string databaseName): base(databaseName) { }    
+        public KennelData(string databaseName): base(databaseName) { }    
         public DBSet<Booking> Bookings { get; set;}
         public DbSet<Kennel> Kennels { get; set; }
     }
